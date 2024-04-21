@@ -55,4 +55,4 @@ Este projeto de fórum com a arquitetura Clean e o Nest.js visa criar uma aplica
 
 3. **Converter o conteudo dos certificados para Base64**
 
-- Depois de gerar o private_key e o public_key, deve-se converter o conteudo dos certificados para `Base64`.
+- Depois de gerar o private_key e o public_key, deve-se converter o conteudo dos certificados para `Base64` encoding.
