@@ -54,12 +54,14 @@ Este projeto de fórum com a arquitetura Clean e o Nest.js visa criar uma aplica
     Use o comando `rsa` para extrair a chave pública a partir da chave privada:
     
     - Versão `OpenSSL 0.9.8h`
-    ```bash
-    openssl rsa -pubout -in private_key.pem -out public_key.pem
+    
+        ```bash
+        openssl rsa -pubout -in private_key.pem -out public_key.pem
 
     - Versão `OpenSSL 3.0.2`
-   ```bash
-   openssl rsa -pubout -in private_key.pem -out public.pem
+   
+        ```bash
+        openssl rsa -pubout -in private_key.pem -out public.pem
 
 - Isso criará uma chave pública chamada public_key.pem.
 
