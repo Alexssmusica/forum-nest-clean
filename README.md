@@ -33,23 +33,33 @@ A estrutura de diretórios seguirá os princípios da arquitetura Clean, separan
 
 Este projeto de fórum com a arquitetura Clean e o Nest.js visa criar uma aplicação robusta e escalável que possa crescer com as necessidades dos usuários. A estrutura modular e a separação de preocupações permitirão o desenvolvimento rápido e a manutenção fácil, enquanto o Nest.js oferece uma base sólida para construir um servidor eficiente e confiável. A escolha das tecnologias e funcionalidades específicas dependerá das necessidades do projeto e dos requisitos do cliente.
 
-# Gerar um par de chaves RSA usando o OpenSSL 0.9.8h
+# Gerar um par de chaves RSA usando o OpenSSL 0.9.8h e OpenSSL 3.0.2
 
 1. **Gere a chave privada RSA**:
 
    Use o comando `genrsa` para gerar a chave privada RSA:
-
+   
+   - Versão `OpenSSL 0.9.8h`
    ```bash
    openssl genrsa -out private_key.pem 2048
+
+    - Versão `OpenSSL 3.0.2`
+   ```bash
+   openssl genpkey -algorithm RSA -out private_key.pem -pkeyopt rsa_keygen_bits:2048
 
 - Isso criará uma chave privada não criptografada chamada private_key.pem com 2048 bits.
 
 2. **Extraia a chave pública RSA**:
     
     Use o comando `rsa` para extrair a chave pública a partir da chave privada:
-
+    
+    - Versão `OpenSSL 0.9.8h`
     ```bash
     openssl rsa -pubout -in private_key.pem -out public_key.pem
+
+    - Versão `OpenSSL 3.0.2`
+   ```bash
+   openssl rsa -pubout -in private_key.pem -out public.pem
 
 - Isso criará uma chave pública chamada public_key.pem.
 
