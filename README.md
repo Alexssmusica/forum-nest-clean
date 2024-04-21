@@ -40,12 +40,14 @@ Este projeto de fórum com a arquitetura Clean e o Nest.js visa criar uma aplica
    Use o comando `genrsa` para gerar a chave privada RSA:
    
    - Versão `OpenSSL 0.9.8h`
-   ```bash
-   openssl genrsa -out private_key.pem 2048
+        
+        ```bash
+        openssl genrsa -out private_key.pem 2048
 
     - Versão `OpenSSL 3.0.2`
-   ```bash
-   openssl genpkey -algorithm RSA -out private_key.pem -pkeyopt rsa_keygen_bits:2048
+        
+        ```bash
+        openssl genpkey -algorithm RSA -out private_key.pem -pkeyopt rsa_keygen_bits:2048
 
 - Isso criará uma chave privada não criptografada chamada private_key.pem com 2048 bits.
 
